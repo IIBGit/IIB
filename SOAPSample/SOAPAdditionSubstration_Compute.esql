@@ -4,7 +4,7 @@ DECLARE ns NAMESPACE 'http://www.example.org/AddandSub/';
 CREATE COMPUTE MODULE SOAPAdditionSubstration_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
-		-- CALL CopyMessageHeaders();
+		CALL CopyMessageHeaders();
 		 CALL CopyEntireMessage();
 		RETURN TRUE;
 	END;
