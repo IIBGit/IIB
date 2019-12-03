@@ -1,0 +1,27 @@
+
+
+Importing file: C:\Users\Administrator\IBM\IIBT10\workspace\SOAPSample\AddandSub.wsdl
+
+
+The following is a list of WS-I warning messages found when importing:
+WS-I BP 1.1: (BP2118) The binding does not have the same list of operations as the AddandSub port type to which it refers., Line: 60, Column: 3
+
+
+The WSDL import will proceed with bindings AddandSubSOAP.
+Creating wsdl schema document for file:///C:/Users/Administrator/IBM/IIBT10/workspace/SOAPSample/AddandSub.wsdl.
+Parsing wsdl binding {http://www.example.org/AddandSub/}AddandSubSOAP.
+Parsing wsdl binding input Addition.
+Parsing wsdl binding output Addition.
+Processing doc style for operation Addition.
+Populating WSDL schema AddandSub.xsd.
+Creating file AddandSub.xsd in the workspace.
+Creating file AddandSub_InlineSchema1.xsd in the workspace.
+Copying source WSDL AddandSub.wsdl to AddandSub.wsdl.
+
+Elapsed time processing this message definition file: 0.561 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+
