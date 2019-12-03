@@ -11,7 +11,7 @@ CREATE COMPUTE MODULE SOAPAdditionSubstration_Compute
 
 	CREATE PROCEDURE CopyMessageHeaders() BEGIN
 		DECLARE I INTEGER 1;
-		DECLARE J INTEGER;
+		DECLARE J INTEGER 1;
 		SET J = CARDINALITY(InputRoot.*[]);
 		WHILE I < J DO
 			SET OutputRoot.*[I] = InputRoot.*[I];
