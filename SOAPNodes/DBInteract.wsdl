@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="DBInteract" targetNamespace="http://www.example.org/DBInteract/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org/DBInteract/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="DBInteract_InlineSchema1.xsd"/>
+        <binding hasEncoding="false" imported="true" name="DBInteractSOAP" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    
+          <xsd:schema targetNamespace="http://www.example.org/DBInteract/" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions">
+<xsd:include schemaLocation="DBInteract_InlineSchema1.xsd"/>
+    </xsd:schema>
+    </wsdl:types>
+  <wsdl:message name="DBInteractRequest">
+    <wsdl:part element="tns:DBInteract" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="DBInteractResponse">
+    <wsdl:part element="tns:DBInteractResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="DBInteract">
+    <wsdl:operation name="DBInteract">
+      <wsdl:input message="tns:DBInteractRequest"/>
+      <wsdl:output message="tns:DBInteractResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DBInteractSOAP" type="tns:DBInteract">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="DBInteract">
+      <soap:operation soapAction="http://www.example.org/DBInteract/DBInteract"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DBInteract">
+    <wsdl:port binding="tns:DBInteractSOAP" name="DBInteractSOAP">
+      <soap:address location="http://192.168.2.22:7800/dbinteract"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
